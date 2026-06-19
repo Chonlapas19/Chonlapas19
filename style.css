@@ -3,10 +3,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(-45deg, #ff9ecf, #ff69b4, #ffc0cb, #ffb6c1);
+    /* เปลี่ยนเป็นสีดำ น้ำเงิน ฟ้า ผสมกัน */
+    background: linear-gradient(-45deg, #05050a, #0a192f, #172a45, #00b4d8, #0077b6);
     background-size: 400% 400%;
-    animation: bgMove 8s ease infinite;
-    color: #333;
+    animation: bgMove 12s ease infinite; /* ปรับให้เคลื่อนไหวสมูทขึ้น */
+    color: #e2e8f0; /* เปลี่ยนสีตัวอักษรหลักเป็นสีสว่างเพื่อให้ทับบนพื้นหลังเข้มได้ชัดเจน */
 }
 
 /* พื้นหลังเคลื่อนไหว */
@@ -17,7 +18,8 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, #ff69b4, #ff1493);
+    /* เปลี่ยนแถบหัวข้อเป็นไล่เฉดสีน้ำเงินเข้มไปฟ้า */
+    background: linear-gradient(90deg, #0a192f, #0077b6);
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -30,26 +32,30 @@ header h1 {
 
 header p {
     margin: 5px 0 0;
+    color: #90e0ef; /* สีฟ้าอ่อนเพิ่มความเด่น */
 }
 
 section {
     padding: 20px;
     margin: 20px auto;
     max-width: 800px;
-    background: rgba(255, 255, 255, 0.95);
+    /* ปรับกล่องเนื้อหาเป็นสีโปร่งแสงโทนเข้ม เพื่อให้กลมกลืนกับพื้นหลังหลัง */
+    background: rgba(10, 25, 47, 0.85); 
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    border: 1px solid rgba(0, 180, 216, 0.2); /* เพิ่มเส้นขอบเรืองแสงเบาๆ */
+    box-shadow: 0 0 20px rgba(0, 119, 182, 0.3);
     animation: fadeUp 1s ease;
     transition: all 0.3s ease;
 }
 
 section:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 30px rgba(255, 20, 147, 0.6);
+    /* เมื่อชี้จะเรืองแสงสีฟ้าสว่างขึ้น */
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.6);
 }
 
 h2 {
-    color: #ff1493;
+    color: #00b4d8; /* เปลี่ยนหัวข้อใหญ่เป็นสีฟ้าสว่าง */
 }
 
 .project {
@@ -58,7 +64,7 @@ h2 {
 
 .project h3 {
     margin: 0 0 10px;
-    color: #ff69b4;
+    color: #90e0ef; /* เปลี่ยนหัวข้อโปรเจกต์เป็นสีฟ้าอ่อน */
 }
 
 ul {
@@ -69,30 +75,28 @@ ul {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: linear-gradient(90deg, #ff1493, #ff69b4);
+    /* แถบด้านล่างเป็นโทนน้ำเงินเข้มตัดฟ้า */
+    background: linear-gradient(90deg, #0a192f, #005f73);
     color: white;
     margin-top: 20px;
 }
 
+footer a {
+    color: #00b4d8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 /* Animation */
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
